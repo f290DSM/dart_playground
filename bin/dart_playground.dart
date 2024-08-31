@@ -1,3 +1,5 @@
+import 'dart:math';
+
 /// Função gatilho da aplicação, ou seja é o entry-point do projeto.
 main() {
   //TODO: Comentários
@@ -155,6 +157,13 @@ main() {
   }
 
   //TODO: Funções
+  exibirNumeroDaSorte(nome: 'Carlão', limite: 5);
 
   //TODO: Desafio!!!!!!
+}
+
+// Funções com parametro nomeados, opcionais e posicionais.
+void exibirNumeroDaSorte({String? nome, int? limite = 100}) {
+  print(
+      '${nome ??= 'Anonimo'}, seu numero da sorte é ${Random().nextInt(limite!) + 1}');
 }
